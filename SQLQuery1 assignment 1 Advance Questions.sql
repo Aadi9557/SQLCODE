@@ -1,0 +1,31 @@
+--inner join
+SELECT*FROM BRAND.[dbo].ITEMS_table AS IT
+INNER JOIN 
+PRODUCT.[dbo].PRODUCT_table AS PT
+ON IT.Item_Id=PT.Product_Id
+--FULL JOIN
+SELECT ITEM_ID FROM BRAND.[dbo].ITEMS_table AS IT
+FULL JOIN
+PRODUCT.[dbo].PRODUCT_table AS PT
+ON IT.Item_Id=PT.Product_Id
+--LEFT JOIN
+SELECT ITEM_DESCRIPTION,vendor_name FROM BRAND.[dbo].ITEMS_table AS IT
+LEFT JOIN
+PRODUCT.[dbo].PRODUCT_table AS PT
+ON IT.Item_Id=PT.Product_Id
+
+--RIGHT JOIN
+SELECT ITEM_DESCRIPTION,vendor_name FROM BRAND.[dbo].ITEMS_table AS IT
+RIGHT JOIN
+PRODUCT.[dbo].PRODUCT_table AS PT
+ON IT.Item_Id=PT.Product_Id
+
+
+SELECT ITEM_DESCRIPTION,product FROM BRAND.[dbo].ITEMS_table AS IT
+FULL JOIN
+PRODUCT.[dbo].PRODUCT_table AS PT
+ON IT.Item_Id=PT.Product_Id
+WHERE GrossSales=13320
+
+
+
